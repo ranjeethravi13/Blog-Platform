@@ -1,14 +1,13 @@
-import { useState } from 'react'
+import "./index.css";
+
 
 
 function App() {
 
 
   return (
-    <>
-    <h1>Helow world</h1>
-      
-    </>
+   <div className="min-h-screen bg-gradient-to-r from-purple-500 to-pink-500">
+   <h1>Hello world</h1> </div>
   )
 }
 
