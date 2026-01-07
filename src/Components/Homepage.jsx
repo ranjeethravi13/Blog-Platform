@@ -1,4 +1,6 @@
-const Homepage = ({ blogs }) => {
+import { Link } from "react-router-dom";
+
+const Homepage = ({ blogs,deleteItem }) => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">All Blogs</h2>
@@ -11,6 +13,8 @@ const Homepage = ({ blogs }) => {
         {blogs.map((blog, index) => (
           <div key={index} className="p-4 bg-gray-100 rounded shadow">
             <p>{blog}</p>
+            <Link to={`/edit/${index}`}>✏️</Link>
+            <button onClick={()=>deleteItem(blog)}>🗑️</button>
           </div>
         ))}
       </div>
